@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Soccer.Pages.LoginPage"
+	Title="Soccer"
+    BackgroundColor="{StaticResource MainColor}"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ScrollView
+        BindingContext="{Binding Login}">
+        <StackLayout
+            Padding="8">
+            <Image
+                Source="Soccer.png">
+            </Image>
+
+        </StackLayout>
+
+
+    </ScrollView>
+    
+</ContentPage>

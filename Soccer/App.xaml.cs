@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using Soccer.Pages;
 
 namespace Soccer
 {
@@ -8,7 +9,7 @@ namespace Soccer
         {
             InitializeComponent();
 
-            MainPage = new SoccerPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

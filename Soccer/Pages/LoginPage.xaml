@@ -9,14 +9,113 @@
     <ScrollView
         BindingContext="{Binding Login}">
         <StackLayout
+            Spacing="10"
             Padding="8">
             <Image
                 Source="Soccer.png">
-            </Image>
-
+            </Image>           
+           <Label
+                Text="Login"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="{StaticResource BackgroundColor}">
+            </Label>
+        <StackLayout
+            Padding="30,0,30,0"
+            Orientation="Horizontal">
+           <Label
+                Text="Email"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                TextColor="{StaticResource BackgroundColor}">
+            </Label>
+            <Entry
+                Text="{Binding Email}"
+                Placeholder="Enter an Email..."
+                Keyboard="Email"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                BackgroundColor="{StaticResource BackgroundColor}">
+            </Entry> 
+         </StackLayout>
+         <StackLayout
+            Padding="30,0,30,0"
+            Orientation="Horizontal">
+           <Label
+                Text="Password"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                TextColor="{StaticResource BackgroundColor}">
+            </Label>
+            <Entry
+                Text="{Binding Password}"
+                Placeholder="Enter a Password..."
+                IsPassword="true"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                BackgroundColor="{StaticResource BackgroundColor}">
+            </Entry> 
+            </StackLayout>
+            <StackLayout
+            Padding="30,0,30,0"
+            Orientation="Horizontal">
+            <Switch
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                IsToggled="{Binding IsRemembered}">
+            </Switch>
+           <Label
+                Text="Rememberme"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                TextColor="{StaticResource BackgroundColor}">
+            </Label>
+            </StackLayout>
+            <ActivityIndicator
+                IsRunning="{Binding IsRunning}">
+            </ActivityIndicator>
+            <StackLayout
+            Padding="30,0,30,0"
+            Orientation="Vertical">
+                <Button
+                    Command="{Binding LoginCommand}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Teal"
+                    TextColor="White"
+                    Text="Login">
+                </Button>
+                <Button
+                    Command="{Binding LoginFacebookCommand}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    Text="Login With Facebook">
+                </Button>
+                <Button
+                    Command="{Binding RegisterCommand}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Purple"
+                    TextColor="White"
+                    Text="Register New User">
+                </Button>
+                <Label
+                    Text="Forgot your Password?"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="{StaticResource BackgroundColor}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
         </StackLayout>
-
-
     </ScrollView>
-    
 </ContentPage>

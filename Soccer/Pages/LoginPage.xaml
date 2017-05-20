@@ -21,44 +21,56 @@
                 HorizontalOptions="Center"
                 TextColor="{StaticResource BackgroundColor}">
             </Label>
-        <StackLayout
-            Padding="30,0,30,0"
-            Orientation="Horizontal">
-           <Label
-                Text="Email"
-                FontAttributes="Bold"
-                HorizontalOptions="Start"
-                VerticalOptions="Center"
-                TextColor="{StaticResource BackgroundColor}">
-            </Label>
-            <Entry
-                Text="{Binding Email}"
-                Placeholder="Enter an Email..."
-                Keyboard="Email"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                BackgroundColor="{StaticResource BackgroundColor}">
-            </Entry> 
-         </StackLayout>
-         <StackLayout
-            Padding="30,0,30,0"
-            Orientation="Horizontal">
-           <Label
-                Text="Password"
-                FontAttributes="Bold"
-                HorizontalOptions="Start"
-                VerticalOptions="Center"
-                TextColor="{StaticResource BackgroundColor}">
-            </Label>
-            <Entry
-                Text="{Binding Password}"
-                Placeholder="Enter a Password..."
-                IsPassword="true"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                BackgroundColor="{StaticResource BackgroundColor}">
-            </Entry> 
-            </StackLayout>
+            <Grid
+                Padding="30,0,30,0">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Text="Email"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource BackgroundColor}">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Text="{Binding Email}"
+                        Placeholder="Enter an email..."
+                        Keyboard="Email"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        BackgroundColor="{StaticResource BackgroundColor}">
+                    </Entry>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Text="Password"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource BackgroundColor}">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Text="{Binding Password}"
+                        Placeholder="Enter a password..."
+                        IsPassword="True"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        BackgroundColor="{StaticResource BackgroundColor}">
+                    </Entry>
+                </Grid>
+            </Grid>
+
             <StackLayout
             Padding="30,0,30,0"
             Orientation="Horizontal">

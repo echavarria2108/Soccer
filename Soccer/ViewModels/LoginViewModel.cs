@@ -1,10 +1,23 @@
 ﻿using System;
+using System.ComponentModel;
+
+
 namespace Soccer.ViewModels
 {
-    public class LoginViewModel
+    public class LoginViewModel : INotifyPropertyChanged
     {
-        public LoginViewModel()
-        {
-        }
+
+        #region Events
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+
+        #region MyRegion
+
+
+
+        #endregion
+
+
     }
 }

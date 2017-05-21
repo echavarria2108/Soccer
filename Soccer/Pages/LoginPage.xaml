@@ -95,6 +95,7 @@
             Orientation="Vertical">
                 <Button
                     Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsEnabled}"
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="Teal"
@@ -103,6 +104,7 @@
                 </Button>
                 <Button
                     Command="{Binding LoginFacebookCommand}"
+                    IsEnabled="{Binding IsEnabled}"
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="Blue"
@@ -111,6 +113,7 @@
                 </Button>
                 <Button
                     Command="{Binding RegisterCommand}"
+                    IsEnabled="{Binding IsEnabled}"
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="Purple"

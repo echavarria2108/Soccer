@@ -28,5 +28,19 @@ namespace Soccer.Models
 		
 		public Team FavoriteTeam { get; set; }
 
+		public string FullPicture
+		{
+			get
+			{
+				if (string.IsNullOrEmpty(Picture))
+				{
+					return "avatar_user.png";
+				}
+
+				return string.Format("http://soccerbackend.azurewebsites.net{0}", Picture.Substring(1));
+			}
+		}
+
+
 	}
 }

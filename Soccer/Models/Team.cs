@@ -14,5 +14,19 @@ namespace Soccer.Models
 
 		public int LeagueId { get; set; }
 
+		public string FullLogo
+		{
+			get
+			{
+				if (string.IsNullOrEmpty(Logo))
+				{
+					return "avatar_shield.png";
+				}
+
+				return string.Format("http://soccerbackend.azurewebsites.net{0}", Logo.Substring(1));
+			}
+		}
+
+
 	}
 }

@@ -17,19 +17,16 @@ namespace Soccer.ViewModels
         #endregion
 
         #region Attributes
+
         private ApiService apiService;
-
         private DialogService dialogService;
-
+        private NavigationService navigationService;
         private string email;
-
         private string password;
-
         private bool isRunning;
-
         private bool isEnabled;
-
         private bool isRemembered;
+
         #endregion
 
 
@@ -124,6 +121,7 @@ namespace Soccer.ViewModels
             dialogService = new DialogService();
             IsEnabled = true;
             IsRemembered = true;
+            navigationService = new NavigationService();
 
 
         }
@@ -211,10 +209,17 @@ namespace Soccer.ViewModels
 				return;
 			}
 
-			IsRunning = false;
+
+            Email = null;
+            password = null;
+
+            IsRunning = false;
 			IsEnabled = true;
             var user = (User)response.Result;
-            await dialogService.ShowMessage("Taran!!!", string.Format("Welcome: {0} {1}, Alias: {2}", user.FirstName,user.LastName,user.NickName));
+            var mainViewModel = MainViewModel.GetInstance();
+            mainViewModel.CurrentUser = user;
+            navigationService.SetMainPage("MasterPage");
+
 
 
         }
